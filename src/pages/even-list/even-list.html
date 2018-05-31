@@ -1,0 +1,28 @@
+<!--
+  Generated template for the EvenListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>EvenList</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-item *ngFor="let event of eventList"
+  (click)="goToEventDetail(event.id)">
+  <h2>{{event?.name}}
+    <p>
+      Harga Event: 
+    </p>
+    <strong>
+      Rp. {{event?.price}}
+    </strong>
+  </h2>
+</ion-item>
+</ion-content>
